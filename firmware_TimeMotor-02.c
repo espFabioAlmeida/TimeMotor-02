@@ -26,6 +26,7 @@ CONSTANTES
 #define on           output_high         
 #define off          output_low  
 
+#define DEBOUNCE     120
 #define TEMPO_AH     600
 #define TEMPO_MIN_H  10
 #define TEMPO_MAX_H  300
@@ -41,7 +42,7 @@ VARIAVEIS
 ==============================================================================*/ 
 int1 
    flagLeituraAnalogica = false,
-   flagAcionamneto = false;
+   flagAcionamento = false;
 
 unsigned int16
    contadorTempoAH = 0,
@@ -55,6 +56,7 @@ VARIAVEIS ARRAY
 ARQUIVOS ANEXOS
 ==============================================================================*/
 #include <UtilityAnalog.c>
+#include <SubrotinasOperacao.c>
 #include <InterrupcaoTimer1.c>
 /*==============================================================================
 MAIN                                           
@@ -84,6 +86,8 @@ void main() {
          flagLeituraAnalogica = false;
          leTempo();
       }
+
+      operacao();
    }                                                   
 }                          
 /*==============================================================================
