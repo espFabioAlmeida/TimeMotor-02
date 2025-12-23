@@ -22,6 +22,14 @@ TAREFAS 100ms
 void tarefas100ms() {
     static unsigned int conta500ms = 0;
 
+    if(contadorTempoAH) {
+        contadorTempoAH ++;
+    }
+
+    if(contadorTempoH) {
+        contadorTempoH ++;
+    }
+
     conta500ms ++;
     if(conta500ms >= 5) {
         conta500ms = 0;
