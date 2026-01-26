@@ -27,9 +27,9 @@ CONSTANTES
 #define off          output_low  
 
 #define DEBOUNCE     120
-#define TEMPO_AH     600
+#define TEMPO_AH     150
 #define TEMPO_MIN_H  10
-#define TEMPO_MAX_H  300
+#define TEMPO_MAX_H  600
 /*==============================================================================
 DEFINICOES DOS PINOS                                      
 ==============================================================================*/
